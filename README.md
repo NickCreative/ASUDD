@@ -1,11 +1,34 @@
-<div align="center">
+# АСУДД Отчёты — Локальный запуск
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+Это приложение для учета отказов оборудования и формирования ежемесячных отчетов.
 
-  <h1>Built with AI Studio</h2>
+## Требования
+*   **Node.js** (версия 18 или выше). Скачать: [nodejs.org](https://nodejs.org/)
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## Быстрый старт
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+1.  **Установка зависимостей**:
+    Откройте терминал в папке проекта и выполните:
+    ```bash
+    npm install
+    ```
 
-</div>
+2.  **Запуск приложения**:
+    Выполните команду:
+    ```bash
+    npm run dev
+    ```
+
+3.  **Использование**:
+    Откройте браузер и перейдите по адресу: [http://localhost:3000](http://localhost:3000)
+
+## Перенос данных
+Если у вас есть файл резервной копии `failures_backup.db` или вы скачали `failures.db` из онлайн-версии:
+1.  Остановите приложение (Ctrl+C в терминале).
+2.  Скопируйте ваш файл в папку проекта под именем `failures.db`.
+3.  Снова запустите приложение.
+
+## Структура проекта
+*   `server.ts` — Серверная часть (Express + SQLite).
+*   `src/` — Исходный код интерфейса (React + Tailwind CSS).
+*   `failures.db` — Файл базы данных (хранит все ваши записи).
